@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../imagens/favicon.ico" type="image/x-icon">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -144,8 +145,9 @@ main{
 .imgesc{
     display: flex;
     flex-direction: column;
-    margin: 10px;
     justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
     
 
 }
@@ -232,6 +234,7 @@ transform: scale();
     margin: 10px;
     border: 3px solid #c299df;
     border-radius: 5px;
+    display: none;
 }
 
 .detalhes details summary{
@@ -285,6 +288,15 @@ main{
     align-items: center;
 }
 
+.indexacao{
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    width: fit-content;
+    height: fit-content;
+    flex-wrap: nowrap;
+}
+
 .boxproduto{
     width: 95vw;
     display: flex;
@@ -294,6 +306,7 @@ main{
 }
 
 .imgcapa{
+    margin: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -306,11 +319,22 @@ main{
 
 }
 
+.imgesc img{
+    width: 30%;
+    height: 30%;
+}
+
 .infosprinc{
+    display: grid;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding: none;
+    margin: none;
+    display: grid;
+    place-items: center;
+    width: fit-content;    
 }
 
 .det{
@@ -351,7 +375,7 @@ header {
     align-items: center;
     width: 100vw;
     height: 100vh;
-    z-index: 2;
+    z-index: 3;
     position: fixed;
     background-color: #3c028357;
     backdrop-filter: blur(3px);
@@ -372,6 +396,7 @@ header {
     margin: 20% auto;
     z-index: 2;
     color: white;
+    line-height: 25px;
 }
 
 .inpimg img{
@@ -428,7 +453,10 @@ header{
 }
 
 .infosprinc{
-    display: flex;
+    padding: none;
+    margin: none;
+    display: grid;
+    place-items: center;
     align-items: center;
     justify-content: center;
 
@@ -439,7 +467,7 @@ header{
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-right: 20px;
+
 }
 
 }
@@ -447,17 +475,17 @@ header{
 }
 
     </style>
-    <title>Nome Produto</title>
+    <title>Fone P2</title>
 </head>
 <body>
     <header>
-        <div class="logo"><a href=""><img class="logoimg" src="../imagens/bvsmart-logo-300.png" alt=""></div></a>
+        <div class="logo"><a href="../index.html"><img class="logoimg" src="../imagens/bvsmart-logo-300.png" alt=""></div></a>
         <div class="categorias">
             <ul class="categoriasul">
-                <a href=""><li class="itens">Fones de Ouvido</li></a>
-                <a href=""><li class="itens">Pen Drives</li></a>
-                <a href=""><li class="itens">Caixas de Som</li></a>
-                <a href=""><li class="itens">Carregadores e Cabos</li></a>
+                <a href="../cat-fone.html"><li class="itens">Fones de Ouvido</li></a>
+                <a href="../cat-pendrives.html"><li class="itens">Pen Drives</li></a>
+                <a href="../cat-caixas.html"><li class="itens">Caixas de Som</li></a>
+                <a href="../cat-outros.html"><li class="itens">Outros</li></a>
             </ul>
         </div>
 
@@ -465,20 +493,25 @@ header{
                 <input id="inp" type="checkbox">
                 <label class="inpimg" for="inp"  onclick="mostrar()"><img src="../imagens/iconmenu.svg" alt=""></label>
             </div>
-        
-
+    
         <div class="celular show" id="celular">
 
             <ul class="catcel">
-                <a href=""><li class="itenscel">Fones de Ouvido</li></a>
-                <a href=""><li class="itenscel">Pen Drives</li></a>
-                <a href=""><li class="itenscel">Caixas de Som</li></a>
-                <a href=""><li class="itenscel">Carregadores e Cabos</li></a>
+                <a href="../cat-fone.html"><li class="itenscel">Fones de Ouvido</li></a>
+                <a href="../cat-pendrives.html"><li class="itenscel">Pen Drives</li></a>
+                <a href="../cat-caixas.html"><li class="itenscel">Caixas de Som</li></a>
+                <a href="../cat-outros.html"><li class="itenscel">Outros</li></a>
 
         </div>
     </header>
     <main>
-        <p class="indexacao"><a href="../index.html">Início</a>>Caixas de Som>A9 Mini</p>
+        <div class="indexacao">
+            <a href="../index.html">Início</a>
+            >
+            <a href="../cat-fone.html">Fones de Ouvido</a>
+            >
+            <p>Fone Simples</p>
+        </div>
         <div class="boxproduto">
             <div class="infosprinc">
                 <div class="imgesc">
@@ -487,13 +520,13 @@ header{
                     <img onclick="trocar3()" id="foto3" src="../imagens/fonecomfio3.jpg" alt="">
                 </div>
                 <div class="imgcapa">
-                    <img id="fotop" src="../imagens/caixa-de-som-media-400px.jpg" alt="">
+                    <img id="fotop" src="../imagens/fonecomfio2-400px.jpg" alt="">
                 </div>
                 <div class="det">
-                    <h1>A9 Mini</h1>
+                    <h1>Fone Com Fio P2</h1>
                     <p class="desc"></p>
-                    <p class="preco">R$59,90</p>
-                    <button class="btnbuy">COMPRAR <img class="imgbtn" src="../imagens/whatsapp.png" alt=""></button>
+                    <p class="preco">R$24,90</p>
+                    <a href="https://wa.me/5595991748522?text=Ol%C3%A1%2C+estou+interessado+no+Fone+com+fio+P2%21" target="_blank"><button class="btnbuy">COMPRAR <img class="imgbtn" src="../imagens/whatsapp.png" alt=""></button></a>
                 </div>
             </div>
             <div class="detalhes">
@@ -521,17 +554,19 @@ header{
         <div class="social">
             <p>Nossas redes sociais:</p>
             <div class="icones">
-                <a href=""><img src="../imagens/instagram.256x256.png" alt="instagram"></a>
-                <a id="wpp" href=""><img src="../imagens/whatsapp.256x256.png" alt="whatsapp"></a>
+                <a href="https://www.instagram.com/smartbv_/" target="_blank"><img src="../imagens/instagram.256x256.png" alt="instagram"></a>
+                <a id="wpp" href="https://wa.me/5595991748522" target="_blank"><img src="../imagens/whatsapp.256x256.png" alt="whatsapp"></a>
             </div>
         </div>
     </footer>
     <script>
         const cel = document.querySelector('.celular')
+        let inp = document.getElementById('inp')
 
         function mostrar(){
-
             cel.classList.toggle('show');
+            inp.checked = false;
+            console.log(inp)
 
         }
 
@@ -542,6 +577,7 @@ header{
         const foto3 = document.getElementById('foto3')
         const foto3src = document.getElementById('foto3').src
         const fotop = document.getElementById('fotop')
+
         
 
         function trocar1(){
@@ -555,6 +591,10 @@ header{
         function trocar3(){
             fotop.setAttribute('src',foto3src)        
         }
+
+        cel.addEventListener('click', mostrar)
+
+
     </script>
 </body>
 </html>
