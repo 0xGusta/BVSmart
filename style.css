@@ -315,6 +315,7 @@ main{
     background-color: #640ba1;
     overflow: hidden;
     border: 3px solid rgb(255, 255, 255);
+    position: relative;
 }
 
 .produto:hover{
@@ -415,14 +416,54 @@ footer{
     margin: 10px;
 }
 
-#wpp{
-    filter: invert(100%);
-}
+
 
 .icones a img{
     width: 100px;
     height: 100px;
     margin: 20px;
+}
+
+.promocao{
+    background-color: #c0758ab0;
+    position: absolute;
+    width: 300px;
+    line-height: 20px;
+    text-align: center;
+    align-items: center;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16pt;
+
+    
+
+}
+
+.ppromo{
+    text-decoration: line-through;
+    text-decoration-thickness: 2px;
+}
+
+
+
+@keyframes girador{
+    0%{
+        rotate: 0deg;
+    }
+    25%{
+        rotate: 90deg;
+    }
+    50%{
+        rotate: 220deg;
+    }
+    75%{
+        rotate: 320deg;
+    }
+    100%{
+        rotate: 360deg;
+    }
+
 }
 
 
@@ -500,6 +541,11 @@ header {
     rotate: 0deg;
     animation-play-state: paused;
 }
+
+.produto{
+    position: relative;
+}
+
 
 @keyframes rodar {
 

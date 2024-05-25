@@ -49,6 +49,7 @@ const cel = document.querySelector('.celular')
 function mostrar(){
 
     cel.classList.toggle('show');
+    
 
 }
 
