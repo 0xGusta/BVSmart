@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BV Smart | Outros </title>
+    <link rel="shortcut icon" href="imagens/favicon.ico" type="image/x-icon">
+    <style>
+
+
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+            font-weight: 500;
+            font-style: normal;
+        }
+
+        a{
+            text-decoration: none;
+            color: #c299df ;
+        }
+
+
+        body{
+            background-image: linear-gradient(0deg, #e1cbef, #a269ca);
+            width: 100%;
+            height: 100%;
+            max-width: 1920px;
+            align-items: center;
+            justify-content: center;
+        }
+
+        header{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: #3d0283;
+            color: #c299df;
+            height: 110px;
+            width: 100vw;
+            overflow: hidden;
+        }
+
+        .inp{
+            visibility: hidden;
+        }
+
+        .inpimg img{
+            width: 50px;
+            height: 50px;
+            margin: 30px;
+            filter: invert(100%);
+            cursor: pointer;
+
+        }
+
+        .logo{
+            margin: 10px;
+            padding-left: 30px;
+        }
+
+        .logoimg {
+            width: 80px;
+            height: 80px;
+        }
+
+        .categorias{
+            display: flex;
+            padding-right: 30px;
+            align-items: center;
+            margin-left: 20%;
+        }
+
+        .categoriasul{
+            list-style: none;
+            display: flex;
+            gap: 50px;
+        
+        }
+
+        .itens{
+            position: relative;
+            width: 150px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .itens:hover{
+            color: black;
+            background-color: #c299df;
+            border-radius: 5px;
+            transition: 0.5s;
+        }
+
+        .principal{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            overflow: hidden;
+        }
+
+        .produto{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 20px;
+            border-radius: 10px;
+            box-shadow: 3px 3px 3px #c299df;
+            width: 230px;
+            height: 400px;
+            background-color: #640ba1;
+            overflow: hidden;
+            border: 3px solid rgb(255, 255, 255);
+            position: relative;
+        }
+
+        .produto:hover{
+            transition: 0.3s ease-in-out;
+            box-shadow: 10px 10px 10px #c299df ;
+
+
+        }
+
+        .produto:hover img{
+            transition: 0.3s ease;
+                
+            transform: scale(120%);
+        }
+
+        .produto:hover .preco{
+            transition: 0.3s;
+            transform: scale(120%);
+        }
+
+
+        /*.produto img:hover{
+
+            height: 220px;
+            width: 220px;
+        }*/
+
+        .produto a {
+            color: #eae1ef;
+            text-align: center;
+        }
+
+        .produto a p{
+            position: relative;
+        }
+
+        .nome{
+            margin-top: 10px;
+        }
+
+        .produto hr{
+            margin: 3px;
+            margin-bottom: 0;
+            width: 300px;
+            display: flex;
+            text-align: center;
+        }
+
+        .produto a img{
+            margin: 10px 10px;
+            width: 200px;
+            height: 200px;
+        }
+
+        .promocao{
+            background-color: #c0758ab0;
+            position: absolute;
+            width: 300px;
+            line-height: 20px;
+            text-align: center;
+            align-items: center;
+            top: 60%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 16pt;
+        }
+
+        .ppromo{
+            text-decoration: line-through;
+            text-decoration-thickness: 2px;
+        }
+
+
+
+        .preco{
+            font-weight: 700;
+            font-size: 25pt;
+        }
+
+        .btnbuy{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 250px;
+            height: 70px;
+            font-size: 15pt;
+            font-weight: 600;
+            background-color: #c299df;
+            border: 0;
+            border-radius: 10px;
+            cursor: pointer;
+            color: #640ba1;
+        }
+
+        .celular{
+            display: none;
+        }
+
+        .btnbuy:hover{
+            text-decoration: underline;
+            background-color: rgb(28, 177, 95);
+            color: white;
+            transition: 0.3s;
+        }
+
+        footer{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #3d0283;
+            width: 100vw;
+            color: #eae1ef;
+            text-align: center;
+        }
+
+        .social{
+            margin: 10px;
+        }
+
+
+
+        .icones a img{
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+        }
+
+        .aqui{
+            color: black;
+            background-color: #c299df;
+            border-radius: 5px;
+        }
+
+        @media (max-width:1130px){
+
+        header {
+            position: fixed;
+            width: 100vw;
+            z-index: 5;
+
+        }
+
+        .principal{
+            padding-top: 110px;
+        }
+
+        .promos{
+            padding-top: 130px;
+        }
+
+
+        .slider1{
+            display: none;
+        }
+
+        .categorias{
+            display: none;
+        }
+
+        .celular{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            z-index: 2;
+            position: fixed;
+            background-color: #3c028357;
+            backdrop-filter: blur(3px);
+            line-height: 5%;
+        
+            
+        }
+
+        .show{
+
+            display: none;
+        }
+
+
+        .itenscel{
+            list-style: none;
+            font-size: 20pt;
+            text-shadow: 3px 3px 2px#3d0283;
+            margin: 20% auto;
+            z-index: 2;
+            color: white;
+        }
+
+        .inpimg img{
+            visibility: visible;
+            position: relative;
+            z-index: 2;
+        }
+
+
+
+        #inp:checked ~ .inpimg img{
+            animation-name: rodar;
+            animation-duration: 0.5s;
+            transition: all 0.5s;
+            rotate: 90deg;
+        }
+
+        #inp:not(:checked) ~ .inpimg img{
+            animation-name: rodar;
+            animation-duration: 0.5s;
+            transition: all 0.5s;
+            rotate: 0deg;
+            animation-play-state: paused;
+        }
+
+        @keyframes rodar {
+
+            0% {
+                rotate: 0deg;
+            }
+            100%{
+                rotate: 90deg;
+            }
+            
+        }
+
+
+
+        }
+
+        @media (max-width:768px) {
+
+        .principal{
+            padding-top: 110px;
+        }
+
+        .promos{
+            display: none;
+        }
+            
+        .produto{
+            width: 300px;
+            height: 420px ;
+        }
+
+        .btnbuy{
+        width: 400px;
+        }
+
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo"><a href="index.html"><img class="logoimg" src="imagens/bvsmart-logo-300.png" alt=""></div></a>
+        <div class="categorias">
+            <ul class="categoriasul">
+                <a href="cat-fone.html"><li class="itens">Fones de Ouvido</li></a>
+                <a href="cat-pendrives.html"><li class="itens">Pen Drives</li></a>
+                <a href="cat-caixas.html"><li class="itens">Caixas de Som</li></a>
+                <a href="cat-outros.html"><li class="itens aqui">Outros</li></a>
+            </ul>
+        </div>
+
+            <div class="inp" >
+                <input id="inp" type="checkbox">
+                <label class="inpimg" for="inp"  onclick="mostrar()"><img src="imagens/iconmenu.svg" alt=""></label>
+            </div>
+        
+
+        <div class="celular show" id="celular">
+
+            <ul class="catcel">
+                <a href="index.html"><li class="itenscel">Início</li></a>
+                <a href="cat-pendrives.html"><li class="itenscel">Pen Drives</li></a>
+                <a href="cat-fone.html"><li class="itenscel">Fones de Ouvido</li></a>
+                <a href="cat-caixas.html"><li class="itenscel">Caixas de Som</li></a>
+
+        </div>
+    </header>
+    <main>
+
+        <div class="principal">
+            
+            <div class="produto">
+                <a href="produtos/produto-relogio.html">
+                    <p class="nome">Relógio Curren</p>
+                    <hr>
+                    <img src="imagens/relogio.png" alt="">
+                    
+                    <p class="preco">R$139,90</p>
+                    <p>Ver Detalhes</p>
+                    <hr>
+                </a>
+                <a href="https://wa.me/5595991748522?text=Ol%C3%A1%2C+estou+interessado+no+Rel%C3%B3gio+Curren%21" target="_blank"><button class="btnbuy">COMPRAR</button></a>
+            </div>
+
+            
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <p>Nossas redes sociais:</p>
+            <div class="icones">
+                <a href="https://www.instagram.com/smartbv_/" target="_blank"><img src="imagens/instagram.svg" alt="instagram"></a>
+                <a id="wpp" href="https://wa.me/5595991748522" target="_blank"><img src="imagens/whatsapp.256x256.png" alt="whatsapp"></a>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script>
+
+        const cel = document.querySelector('.celular')
+        let inp = document.getElementById('inp')
+
+        function mostrar(){
+            cel.classList.toggle('show');
+            inp.checked = false;
+            console.log(inp)
+
+        }
+
+        cel.addEventListener('click', mostrar)
+
+
+
+    </script>
+</body>
+</html>
